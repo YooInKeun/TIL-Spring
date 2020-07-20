@@ -1,6 +1,7 @@
 import com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput;
 
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -54,5 +55,19 @@ public class StreamAPI {
 //                .filter(i -> i.contains("hello"))
 //                .collect(Collectors.toList());
 //        System.out.println(lowerCaseHelloWorld);
+
+        /**
+         * sorted: 정렬
+         */
+        List<Integer> numbers = Arrays.asList(3, 6, 1, 2);
+        List<Integer> sortedNumbers = numbers.stream()
+                .sorted()
+                .collect(Collectors.toList());
+        System.out.println(sortedNumbers);
+
+        sortedNumbers = numbers.stream()
+                .sorted(Comparator.reverseOrder())
+                .collect(Collectors.toList());
+        System.out.println(sortedNumbers);
     }
 }
