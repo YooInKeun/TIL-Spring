@@ -69,5 +69,28 @@ public class StreamAPI {
                 .sorted(Comparator.reverseOrder())
                 .collect(Collectors.toList());
         System.out.println(sortedNumbers);
+
+        /**
+         * distinct: 중복 제거
+         */
+        List<String> names = Arrays.asList("홍길동", "세종대왕", "이순신", "세종대왕");
+        List<String> distinctNames = names.stream()
+                .distinct()
+                .collect(Collectors.toList());
+        System.out.println(distinctNames);
+
+        /**
+         * peek: 특정 연산 수행, 주로 중간에 값 출력
+         */
+        List<Integer> randomNumbers = Arrays.asList(123, 124124, 15125, 23, 123, 124124, 5);
+        List<Integer> selectedRandomNumbers = randomNumbers.stream()
+                .filter(i -> i > 500)
+                .map(i -> i * 2)
+                .peek(System.out::println)
+                .filter(i -> i < 150000)
+                .peek(System.out::println)
+                .distinct()
+                .collect(Collectors.toList());
+        System.out.println(selectedRandomNumbers);
     }
 }
