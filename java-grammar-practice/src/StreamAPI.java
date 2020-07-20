@@ -1,3 +1,5 @@
+import com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput;
+
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -26,5 +28,31 @@ public class StreamAPI {
 //            }
 //        }
 //        System.out.println(filteredScoreList);
+
+        /**
+         * map method: 람다 식의 결과를 반환
+         */
+        List<Integer> rectangularList = Arrays.asList(3, 5, 2, 7, 6);
+        List<Integer> rectangularArea = rectangularList.stream()
+                .map(i -> i * i)
+                .collect(Collectors.toList());
+        System.out.println(rectangularArea);
+
+//        Arrays.asList(3, 5, 2, 7, 6)
+//                .stream()
+//                .map(i -> i * i)
+//                .forEach(System.out::println);
+
+        List<String> helloWorld = Arrays.asList("Hello", "World");
+        List<String> lowerCaseHelloWorld = helloWorld.stream()
+                .map(String::toLowerCase)
+                .collect(Collectors.toList());
+        System.out.println(lowerCaseHelloWorld);
+
+//        lowerCaseHelloWorld = helloWorld.stream()
+//                .map(String::toLowerCase)
+//                .filter(i -> i.contains("hello"))
+//                .collect(Collectors.toList());
+//        System.out.println(lowerCaseHelloWorld);
     }
 }
