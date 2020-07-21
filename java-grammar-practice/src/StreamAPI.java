@@ -3,6 +3,7 @@ import com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 public class StreamAPI {
@@ -57,15 +58,39 @@ public class StreamAPI {
 //        System.out.println(lowerCaseHelloWorld);
 
         /**
+         * reduce method: 요소들을 결합
+         */
+        List<Integer> numbers1 = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+        Optional<Integer> sum1 = numbers1.stream()
+                .reduce((x, y) -> x + y);
+        System.out.println(sum1);
+
+        Integer sum2 = numbers1.stream()
+                .reduce(10, (x, y) -> x + y);
+        System.out.println(sum2);
+
+        Integer sum3 = numbers1.parallelStream()
+                .reduce(0, (x, y) -> x + y);
+        System.out.println(sum3);
+
+        Integer sum4 = numbers1.stream()
+                .reduce(0, (x, y) -> x - y);
+        System.out.println(sum4);;
+
+        Integer sum5 = numbers1.parallelStream()
+                .reduce(0, (x, y) -> x - y);
+        System.out.println(sum5);;
+
+        /**
          * sorted: 정렬
          */
-        List<Integer> numbers = Arrays.asList(3, 6, 1, 2);
-        List<Integer> sortedNumbers = numbers.stream()
+        List<Integer> numbers2 = Arrays.asList(3, 6, 1, 2);
+        List<Integer> sortedNumbers = numbers2.stream()
                 .sorted()
                 .collect(Collectors.toList());
         System.out.println(sortedNumbers);
 
-        sortedNumbers = numbers.stream()
+        sortedNumbers = numbers2.stream()
                 .sorted(Comparator.reverseOrder())
                 .collect(Collectors.toList());
         System.out.println(sortedNumbers);
