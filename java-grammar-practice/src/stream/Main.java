@@ -1,10 +1,12 @@
+package stream;
+
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
-public class StreamAPI {
+public class Main {
     public static void main(String args[]) {
         /**
          * filter method: 람다식의 조건에 맞게 필터링
