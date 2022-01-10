@@ -30,4 +30,10 @@ public class Member {
         this.name = name;
         this.passwordHash = passwordHash;
     }
+
+    public void checkEqualPassword(String plainPassword, PasswordEncryptor passwordEncryptor) {
+        if (!passwordEncryptor.match(passwordHash, plainPassword)) {
+            throw LoginFailedException.wrongPassword();
+        }
+    }
 }

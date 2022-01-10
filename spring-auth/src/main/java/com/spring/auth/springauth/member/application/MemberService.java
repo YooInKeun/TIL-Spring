@@ -1,8 +1,10 @@
 package com.spring.auth.springauth.member.application;
 
+import com.spring.auth.springauth.member.domain.LoginFailedException;
 import com.spring.auth.springauth.member.domain.Member;
 import com.spring.auth.springauth.member.domain.MemberRepository;
 import com.spring.auth.springauth.member.domain.PasswordEncryptor;
+import com.spring.auth.springauth.member.dto.LoginMember;
 import com.spring.auth.springauth.member.dto.MemberRequestDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -18,6 +20,13 @@ public class MemberService {
     public Long create(MemberRequestDto memberRequestDto) {
         Member persistMember = memberRepository.save(createMember(memberRequestDto.getEmail(), memberRequestDto.getName(), memberRequestDto.getPassword(), passwordEncryptor));
         return persistMember.getId();
+    }
+
+    @Transactional(readOnly = true)
+    public LoginMember login(String email, String plainPassword) {
+        final Member findMember = memberRepository.findByEmail(email).orElseThrow(LoginFailedException::noSuchMember);
+        findMember.checkEqualPassword(plainPassword, passwordEncryptor);
+        return new LoginMember(findMember.getId());
     }
 
     public static Member createMember(String email, String name, String plainPassword, PasswordEncryptor passwordEncryptor) {
