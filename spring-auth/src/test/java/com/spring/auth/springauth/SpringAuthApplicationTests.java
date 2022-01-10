@@ -1,10 +1,10 @@
-package hello.core;
+package com.spring.auth.springauth;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class CoreApplicationTests {
+class SpringAuthApplicationTests {
 
     @Test
     void contextLoads() {

@@ -75,11 +75,13 @@ public class Main {
 
         Integer sum4 = numbers1.stream()
                 .reduce(0, (x, y) -> x - y);
-        System.out.println(sum4);;
+        System.out.println(sum4);
+        ;
 
         Integer sum5 = numbers1.parallelStream()
                 .reduce(0, (x, y) -> x - y);
-        System.out.println(sum5);;
+        System.out.println(sum5);
+        ;
 
         /**
          * sorted: 정렬

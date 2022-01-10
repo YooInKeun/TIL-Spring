@@ -2,6 +2,7 @@ package com.yooinkeun.webservice.springboot.web.dto;
 
 import com.yooinkeun.webservice.springboot.web.dto.HelloResponseDto;
 import org.junit.Test;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class HelloResponseDtoTest {

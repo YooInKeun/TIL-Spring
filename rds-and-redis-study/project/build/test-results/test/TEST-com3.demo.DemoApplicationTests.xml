@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com3.demo.DemoApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2020-09-17T10:45:17" hostname="yuingeun-ui-MacBookPro.local" time="0.267">
-  <properties/>
-  <testcase name="contextLoads()" classname="com3.demo.DemoApplicationTests" time="0.267"/>
-  <system-out><![CDATA[19:45:15.433 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+<testsuite name="com3.demo.DemoApplicationTests" tests="1" skipped="0" failures="0" errors="0"
+           timestamp="2020-09-17T10:45:17" hostname="yuingeun-ui-MacBookPro.local" time="0.267">
+    <properties/>
+    <testcase name="contextLoads()" classname="com3.demo.DemoApplicationTests" time="0.267"/>
+    <system-out><![CDATA[19:45:15.433 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
 19:45:15.443 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
 19:45:15.466 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com3.demo.DemoApplicationTests] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
 19:45:15.477 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com3.demo.DemoApplicationTests], using SpringBootContextLoader
@@ -34,5 +35,5 @@
 2020-09-17 19:45:17.373  INFO 65440 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
 2020-09-17 19:45:17.575  INFO 65440 --- [    Test worker] com3.demo.DemoApplicationTests           : Started DemoApplicationTests in 1.889 seconds (JVM running for 2.851)
 ]]></system-out>
-  <system-err><![CDATA[]]></system-err>
+    <system-err><![CDATA[]]></system-err>
 </testsuite>

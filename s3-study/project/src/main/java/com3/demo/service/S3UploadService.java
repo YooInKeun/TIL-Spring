@@ -23,6 +23,7 @@ public class S3UploadService {
 
     /**
      * s3 업로드 후, 객체 url 리턴
+     *
      * @param file
      * @return
      */
@@ -49,6 +50,7 @@ public class S3UploadService {
 
     /**
      * 파일 메타 데이터 설정
+     *
      * @param multipartFile
      * @return
      */

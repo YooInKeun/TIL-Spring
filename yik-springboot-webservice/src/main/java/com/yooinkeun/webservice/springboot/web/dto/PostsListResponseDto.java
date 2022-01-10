@@ -2,6 +2,7 @@ package com.yooinkeun.webservice.springboot.web.dto;
 
 import com.yooinkeun.webservice.springboot.domain.posts.Posts;
 import lombok.Getter;
+
 import java.time.LocalDateTime;
 
 @Getter

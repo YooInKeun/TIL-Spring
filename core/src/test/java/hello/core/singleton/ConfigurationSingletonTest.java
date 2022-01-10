@@ -30,7 +30,7 @@ public class ConfigurationSingletonTest {
 //        assertThat(memberService.getMemberRepository()).isSameAs(memberRepository);
 //        assertThat(orderService.getMemberRepository()).isSameAs(memberRepository);
 //    }
-    
+
     @Test
     void configurationDeep() {
         ApplicationContext ac = new AnnotationConfigApplicationContext(AppConfig.class);

@@ -1,13 +1,13 @@
-package hello.core;
+package com.spring.auth.springauth;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class CoreApplication {
+public class SpringAuthApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(CoreApplication.class, args);
+        SpringApplication.run(SpringAuthApplication.class, args);
     }
 
 }

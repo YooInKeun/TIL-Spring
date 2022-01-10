@@ -24,7 +24,7 @@ public class UserController {
         private String password;
     }
 
-    @PostMapping(value= "/login", consumes = MediaType.APPLICATION_JSON_VALUE)
+    @PostMapping(value = "/login", consumes = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Long> login(@RequestBody LoginRequestParam loginRequestParam,
                                       HttpSession httpSession) {
         User findUser = userService.findByName(loginRequestParam.name);

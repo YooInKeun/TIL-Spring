@@ -35,7 +35,7 @@ class ApplicationContextBasicFindTest {
         MemberService memberService = ac.getBean("memberService", MemberServiceImpl.class); // 실제 구체화된 걸로 적어도 되지만, 좋진 않음, 구체화에 의존하게 되기 때문
         assertThat(memberService).isInstanceOf(MemberServiceImpl.class);
     }
-    
+
     @Test
     @DisplayName("빈 이름으로 조회 X")
     void findBeanByNameX() {
