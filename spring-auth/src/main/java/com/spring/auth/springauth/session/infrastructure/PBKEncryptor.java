@@ -1,6 +1,6 @@
-package com.spring.auth.springauth.member.infrastructure;
+package com.spring.auth.springauth.session.infrastructure;
 
-import com.spring.auth.springauth.member.domain.PasswordEncryptor;
+import com.spring.auth.springauth.session.domain.PasswordEncryptor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 

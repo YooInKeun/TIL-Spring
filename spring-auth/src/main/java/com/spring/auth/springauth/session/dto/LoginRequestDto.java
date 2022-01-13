@@ -1,4 +1,4 @@
-package com.spring.auth.springauth.member.dto;
+package com.spring.auth.springauth.session.dto;
 
 import lombok.Getter;
 

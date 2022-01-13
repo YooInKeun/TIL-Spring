@@ -1,7 +1,7 @@
-package com.spring.auth.springauth.member.dto;
+package com.spring.auth.springauth.session.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.spring.auth.springauth.member.domain.Member;
+import com.spring.auth.springauth.session.domain.Member;
 import lombok.*;
 import lombok.extern.slf4j.Slf4j;
 

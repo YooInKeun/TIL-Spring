@@ -1,4 +1,4 @@
-package com.spring.auth.springauth.member.domain;
+package com.spring.auth.springauth.session.domain;
 
 import lombok.AccessLevel;
 import lombok.Getter;

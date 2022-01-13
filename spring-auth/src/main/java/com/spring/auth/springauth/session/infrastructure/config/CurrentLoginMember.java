@@ -1,4 +1,4 @@
-package com.spring.auth.springauth.member.infrastructure.config;
+package com.spring.auth.springauth.session.infrastructure.config;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

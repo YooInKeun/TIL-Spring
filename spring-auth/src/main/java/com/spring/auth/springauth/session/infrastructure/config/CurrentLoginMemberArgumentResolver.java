@@ -1,4 +1,4 @@
-package com.spring.auth.springauth.member.infrastructure.config;
+package com.spring.auth.springauth.session.infrastructure.config;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.core.MethodParameter;

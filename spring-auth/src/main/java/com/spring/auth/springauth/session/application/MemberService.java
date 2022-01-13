@@ -1,11 +1,11 @@
-package com.spring.auth.springauth.member.application;
+package com.spring.auth.springauth.session.application;
 
-import com.spring.auth.springauth.member.domain.LoginFailedException;
-import com.spring.auth.springauth.member.domain.Member;
-import com.spring.auth.springauth.member.domain.MemberRepository;
-import com.spring.auth.springauth.member.domain.PasswordEncryptor;
-import com.spring.auth.springauth.member.dto.LoginMember;
-import com.spring.auth.springauth.member.dto.MemberRequestDto;
+import com.spring.auth.springauth.session.domain.LoginFailedException;
+import com.spring.auth.springauth.session.domain.Member;
+import com.spring.auth.springauth.session.domain.MemberRepository;
+import com.spring.auth.springauth.session.domain.PasswordEncryptor;
+import com.spring.auth.springauth.session.dto.LoginMember;
+import com.spring.auth.springauth.session.dto.MemberRequestDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

@@ -1,4 +1,4 @@
-package com.spring.auth.springauth.member.domain;
+package com.spring.auth.springauth.session.domain;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

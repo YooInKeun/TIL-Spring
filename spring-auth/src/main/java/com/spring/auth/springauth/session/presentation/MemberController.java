@@ -1,9 +1,9 @@
-package com.spring.auth.springauth.member.presentation;
+package com.spring.auth.springauth.session.presentation;
 
-import com.spring.auth.springauth.member.application.MemberService;
-import com.spring.auth.springauth.member.domain.LoginFailedException;
-import com.spring.auth.springauth.member.dto.*;
-import com.spring.auth.springauth.member.infrastructure.config.CurrentLoginMemberArgumentResolver;
+import com.spring.auth.springauth.session.application.MemberService;
+import com.spring.auth.springauth.session.domain.LoginFailedException;
+import com.spring.auth.springauth.session.dto.*;
+import com.spring.auth.springauth.session.infrastructure.config.CurrentLoginMemberArgumentResolver;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
