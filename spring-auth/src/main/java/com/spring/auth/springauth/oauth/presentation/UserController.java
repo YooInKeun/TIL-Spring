@@ -10,22 +10,25 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 /**
- * TODO
- * 프론트랑 연동한다 생각하고 url 설계 및 설정
- * 로그아웃을 엔드포인트 안 파고, 걍 잘 되게 하기
- * 소셜 로그인이 로그인할 때, 유저가 아니면 회원가입해주고 아니면 로그인? 그런듯
- * 미리도서관 연동해서 써보기
- * 유저 모델에 어떤 소셜 로그인 타입인지 추가하기
+ * Q: 소셜 로그인 종류 추가할 때, 모델에 type 추가하고 interface 만들기
+ * Q: Cookie > JSESSIONID가 왜 계속 남지?
+ * Q: 창 닫기 & 리다이렉트 과정 어떻게 할지 고민해보기
  */
-
 @RequiredArgsConstructor
 @Controller
 public class UserController {
     private final HttpSession httpSession;
     private final UserService userService;
+    private final HttpServletResponse response;
+
+    @GetMapping(value = "/auth/google")
+    public ResponseEntity<String> googleLoginRequest() {
+        return new ResponseEntity<>("http://localhost:8080/oauth2/authorization/google", HttpStatus.OK);
+    }
 
     @GetMapping(value = "/me", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<Void> getUserInfo(@LoginUser SessionUser sessionUser) {
