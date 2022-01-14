@@ -4,6 +4,7 @@ import com.spring.auth.springauth.oauth.domain.User;
 import com.spring.auth.springauth.oauth.domain.UserRepository;
 import com.spring.auth.springauth.oauth.dto.OAuthAttributes;
 import com.spring.auth.springauth.oauth.dto.SessionUser;
+import com.spring.auth.springauth.session.infrastructure.config.CurrentLoginMemberArgumentResolver;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.oauth2.client.userinfo.DefaultOAuth2UserService;
@@ -15,7 +16,6 @@ import org.springframework.security.oauth2.core.user.OAuth2User;
 import org.springframework.stereotype.Service;
 
 import javax.servlet.http.HttpSession;
-import java.util.Collection;
 import java.util.Collections;
 
 @RequiredArgsConstructor
@@ -36,7 +36,7 @@ public class CustomOAuth2UserService implements OAuth2UserService<OAuth2UserRequ
         OAuthAttributes attributes = OAuthAttributes.of(registrationId, userNameAttributeName, oAuth2User.getAttributes());
 
         User user = saveOrUpdate(attributes);
-        httpSession.setAttribute("user", new SessionUser(user));
+        httpSession.setAttribute(CurrentLoginMemberArgumentResolver.LOGIN_ATTRIBUTE_NAME, new SessionUser(user));
 
         return new DefaultOAuth2User(
                 Collections.singleton(new SimpleGrantedAuthority(user.getRoleKey())),

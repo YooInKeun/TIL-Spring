@@ -1,6 +1,7 @@
 package com.spring.auth.springauth.oauth.presentation;
 
 import com.spring.auth.springauth.oauth.dto.SessionUser;
+import com.spring.auth.springauth.session.infrastructure.config.CurrentLoginMemberArgumentResolver;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -16,7 +17,7 @@ public class IndexController {
 
     @GetMapping("/")
     public String index(Model model) {
-        SessionUser user = (SessionUser) httpSession.getAttribute("user");
+        SessionUser user = (SessionUser) httpSession.getAttribute(CurrentLoginMemberArgumentResolver.LOGIN_ATTRIBUTE_NAME);
         if (user != null) {
             model.addAttribute("userName", user.getName());
         }
