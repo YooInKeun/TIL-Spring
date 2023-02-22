@@ -15,7 +15,8 @@ import java.util.Objects;
 public class LoginMember implements Serializable {
     private static final long serialVersionUID = 123456123456L;
 
-    @Getter private Long id;
+    @Getter
+    private Long id;
 
     @JsonIgnore
     public boolean is(Member member) {

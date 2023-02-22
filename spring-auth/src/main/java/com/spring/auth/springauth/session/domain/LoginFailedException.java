@@ -13,5 +13,7 @@ public class LoginFailedException extends RuntimeException {
         return new LoginFailedException("NOT_FOUND");
     }
 
-    public static LoginFailedException wrongPassword() { return new LoginFailedException("WRONG_PASSWORD"); }
+    public static LoginFailedException wrongPassword() {
+        return new LoginFailedException("WRONG_PASSWORD");
+    }
 }

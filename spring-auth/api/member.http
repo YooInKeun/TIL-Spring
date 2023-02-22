@@ -15,3 +15,6 @@ Content-Type: application/json
   "email": "keun0390@naver.com",
   "password": 123123
 }
+
+###
+GET http://localhost:8080/me

@@ -1,0 +1,60 @@
+package com.example.publisher
+
+import org.springframework.amqp.core.Binding
+import org.springframework.amqp.core.BindingBuilder
+import org.springframework.amqp.core.Queue
+import org.springframework.amqp.core.TopicExchange
+import org.springframework.amqp.rabbit.connection.ConnectionFactory
+import org.springframework.amqp.rabbit.core.RabbitTemplate
+import org.springframework.amqp.support.converter.Jackson2JsonMessageConverter
+import org.springframework.amqp.support.converter.MessageConverter
+import org.springframework.context.annotation.Bean
+import org.springframework.context.annotation.Configuration
+import org.springframework.amqp.rabbit.connection.CachingConnectionFactory
+
+@Configuration
+class RabbitMQConfig {
+
+    @Bean
+    fun exchange(): TopicExchange {
+        return TopicExchange(EXCHANGE_NAME)
+    }
+
+    @Bean
+    fun queue(): Queue {
+        return Queue(QUEUE_NAME)
+    }
+
+    @Bean
+    fun binding(queue: Queue?, exchange: TopicExchange?): Binding {
+        return BindingBuilder.bind(queue).to(exchange).with(ROUTING_KEY)
+    }
+
+    @Bean
+    fun rabbitTemplate(connectionFactory: ConnectionFactory, messageConverter: MessageConverter): RabbitTemplate {
+        val rabbitTemplate = RabbitTemplate(connectionFactory)
+        rabbitTemplate.messageConverter = Jackson2JsonMessageConverter()
+        return rabbitTemplate
+    }
+
+    @Bean
+    fun connectionFactory(): ConnectionFactory? {
+        val connectionFactory = CachingConnectionFactory()
+        connectionFactory.host = "localhost"
+        connectionFactory.port = 5672
+        connectionFactory.username = "guest"
+        connectionFactory.setPassword("guest")
+        return connectionFactory
+    }
+
+    @Bean
+    fun messageConverter(): MessageConverter {
+        return Jackson2JsonMessageConverter()
+    }
+
+    companion object {
+        private const val EXCHANGE_NAME = "sample.exchange"
+        private const val QUEUE_NAME = "sample"
+        private const val ROUTING_KEY = "aiden"
+    }
+}
