@@ -1,4 +1,4 @@
-package com.example.publisher
+package rabbitmq
 
 import org.springframework.amqp.core.Binding
 import org.springframework.amqp.core.BindingBuilder
