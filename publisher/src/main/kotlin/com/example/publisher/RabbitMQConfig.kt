@@ -11,9 +11,22 @@ import org.springframework.amqp.support.converter.MessageConverter
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 import org.springframework.amqp.rabbit.connection.CachingConnectionFactory
+import org.springframework.beans.factory.annotation.Value
 
 @Configuration
 class RabbitMQConfig {
+
+    @Value("\${spring.rabbitmq.host}")
+    private lateinit var rabbitMQHost: String
+
+    @Value("\${spring.rabbitmq.port}")
+    private lateinit var rabbitMQPort: String
+
+    @Value("\${spring.rabbitmq.username}")
+    private lateinit var rabbitMQUsername: String
+
+    @Value("\${spring.rabbitmq.password}")
+    private lateinit var rabbitMQPassword: String
 
     @Bean
     fun exchange(): TopicExchange {
@@ -40,10 +53,10 @@ class RabbitMQConfig {
     @Bean
     fun connectionFactory(): ConnectionFactory? {
         val connectionFactory = CachingConnectionFactory()
-        connectionFactory.host = "localhost"
-        connectionFactory.port = 5672
-        connectionFactory.username = "guest"
-        connectionFactory.setPassword("guest")
+        connectionFactory.host = rabbitMQHost
+        connectionFactory.port = rabbitMQPort.toInt()
+        connectionFactory.username = rabbitMQUsername
+        connectionFactory.setPassword(rabbitMQPassword)
         return connectionFactory
     }
 
