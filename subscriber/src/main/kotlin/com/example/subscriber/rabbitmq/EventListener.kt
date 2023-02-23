@@ -1,4 +1,4 @@
-package com.example.subscriber
+package com.example.subscriber.rabbitmq
 
 import org.springframework.amqp.core.Message
 import org.springframework.amqp.rabbit.annotation.RabbitListener
