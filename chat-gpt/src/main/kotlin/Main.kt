@@ -1,7 +1,32 @@
-fun main(args: Array<String>) {
-    println("Hello World!")
+import java.net.HttpURLConnection
+import java.net.URL
+import java.nio.charset.StandardCharsets
 
-    // Try adding program arguments via Run/Debug configuration.
-    // Learn more about running applications: https://www.jetbrains.com/help/idea/running-applications.html.
-    println("Program arguments: ${args.joinToString()}")
+fun main() {
+    val apiKey = "" // OpenAI API Key
+    val prompt = "Hello, how are you?"
+
+    val url = URL("https://api.openai.com/v1/engines/davinci-codex/completions")
+    val con = url.openConnection() as HttpURLConnection
+    con.requestMethod = "POST"
+    con.setRequestProperty("Content-Type", "application/json")
+    con.setRequestProperty("Authorization", "Bearer $apiKey")
+
+    // API 요청 바디 생성
+    val requestBody = "{\"prompt\": \"$prompt\", \"max_tokens\": 60}"
+
+    // API 요청 바디 전송
+    con.doOutput = true
+    con.outputStream.write(requestBody.toByteArray(StandardCharsets.UTF_8))
+
+    // API 응답 수신
+    val response = StringBuilder()
+    con.inputStream.bufferedReader().useLines { lines ->
+        lines.forEach {
+            response.append(it)
+        }
+    }
+
+    // API 응답 출력
+    println(response.toString())
 }
