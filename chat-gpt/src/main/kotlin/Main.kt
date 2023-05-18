@@ -3,7 +3,7 @@ import java.net.URL
 import java.nio.charset.StandardCharsets
 
 fun main() {
-    val apiKey = "" // OpenAI API Key
+    val apiKey = "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" // OpenAI API Key
     val prompt = "Hello, how are you?"
 
     val url = URL("https://api.openai.com/v1/chat/completions")
