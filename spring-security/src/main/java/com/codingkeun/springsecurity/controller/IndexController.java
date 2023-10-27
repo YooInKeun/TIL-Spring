@@ -1,10 +1,14 @@
 package com.codingkeun.springsecurity.controller;
 
+import com.codingkeun.springsecurity.config.auth.PrincipalDetails;
 import com.codingkeun.springsecurity.model.User;
 import com.codingkeun.springsecurity.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.access.annotation.Secured;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.oauth2.core.user.OAuth2User;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -18,15 +22,34 @@ public class IndexController {
 
     private final BCryptPasswordEncoder bCryptPasswordEncoder;
 
-    @GetMapping({"", "/"})
-    public String index() {
-        return "index";
+    @ResponseBody
+    @GetMapping("/test/login")
+    public String testLogin(Authentication authentication, @AuthenticationPrincipal PrincipalDetails userDetails) {
+        PrincipalDetails principalDetails = (PrincipalDetails) authentication.getPrincipal();
+        System.out.println("authentication : " + principalDetails.getUser());
+        System.out.println("userDetails : " + userDetails.getUser());
+        return "세션 정보 확인하기";
+    }
+
+    @ResponseBody
+    @GetMapping("/test/oauth/login")
+    public String testOauthLogin(Authentication authentication, @AuthenticationPrincipal OAuth2User oauth2) {
+        OAuth2User oAuth2User = (OAuth2User) authentication.getPrincipal();
+        System.out.println("authentication : " + oAuth2User.getAttributes());
+        System.out.println("oauth2 : " + oauth2.getAttributes());
+        return "OAuth 세션 정보 확인하기";
     }
 
     @GetMapping("/user")
     @ResponseBody
-    public String user() {
+    public String user(@AuthenticationPrincipal PrincipalDetails principalDetails) {
+        System.out.println("principlaDetails: " + principalDetails.getUser());
         return "user";
+    }
+
+    @GetMapping({"", "/"})
+    public String index() {
+        return "index";
     }
 
     @GetMapping("/admin")
