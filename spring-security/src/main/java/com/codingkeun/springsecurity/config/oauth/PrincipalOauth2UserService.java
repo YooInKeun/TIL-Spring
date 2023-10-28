@@ -3,6 +3,7 @@ package com.codingkeun.springsecurity.config.oauth;
 import com.codingkeun.springsecurity.config.auth.PrincipalDetails;
 import com.codingkeun.springsecurity.config.oauth.provider.FacebookUserInfo;
 import com.codingkeun.springsecurity.config.oauth.provider.GoogleUserInfo;
+import com.codingkeun.springsecurity.config.oauth.provider.NaverUserInfo;
 import com.codingkeun.springsecurity.config.oauth.provider.OAuth2UserInfo;
 import com.codingkeun.springsecurity.model.User;
 import com.codingkeun.springsecurity.repository.UserRepository;
@@ -12,6 +13,8 @@ import org.springframework.security.oauth2.client.userinfo.OAuth2UserRequest;
 import org.springframework.security.oauth2.core.OAuth2AuthenticationException;
 import org.springframework.security.oauth2.core.user.OAuth2User;
 import org.springframework.stereotype.Service;
+
+import java.util.Map;
 
 @RequiredArgsConstructor
 @Service
@@ -33,6 +36,9 @@ public class PrincipalOauth2UserService extends DefaultOAuth2UserService {
         } else if ("facebook".equals(registrationId)) {
             System.out.println("페이스북 로그인 요청");
             oAuth2UserInfo = new FacebookUserInfo(oAuth2User.getAttributes());
+        } else if ("naver".equals(registrationId)) {
+            System.out.println("네이버 로그인 요청");
+            oAuth2UserInfo = new NaverUserInfo((Map<String, Object>) oAuth2User.getAttributes().get("response"));
         } else {
             System.out.println("구글, 페이스북 로그인만 지원합니다.");
         }
