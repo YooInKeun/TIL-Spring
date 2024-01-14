@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="61b20e83-a3ea-41be-aa18-f4418be34658" name="Changes" comment="feat: 네이버 소셜 로그인 기능 추가" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="AnnotationType" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2XIwbbUUZrF7GxpjtO5ZU2ryN02" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/kakao/Desktop/project/TIL-Spring/spring-security&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
+    ]
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.codingkeun.springsecurity.model" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/templates" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.codingkeun.springsecurity.config.oauth.provider" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="SpringSecurityApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="spring-security.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.codingkeun.springsecurity.SpringSecurityApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="61b20e83-a3ea-41be-aa18-f4418be34658" name="Changes" comment="" />
+      <created>1698329974018</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1698329974018</updated>
+      <workItem from="1698329975105" duration="1331000" />
+      <workItem from="1698331337463" duration="22269000" />
+      <workItem from="1698482089731" duration="29000" />
+      <workItem from="1698578646421" duration="4689000" />
+      <workItem from="1698640388964" duration="1000" />
+      <workItem from="1699074609704" duration="467000" />
+      <workItem from="1699075118177" duration="760000" />
+      <workItem from="1699358690590" duration="3442000" />
+      <workItem from="1705219282973" duration="5765000" />
+    </task>
+    <task id="LOCAL-00001" summary="feat: 로그인, 회원가입 기능 추가">
+      <option name="closed" value="true" />
+      <created>1698375207331</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1698375207331</updated>
+    </task>
+    <task id="LOCAL-00002" summary="chore: 권한 설정 테스트 추가">
+      <option name="closed" value="true" />
+      <created>1698381697973</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1698381697973</updated>
+    </task>
+    <task id="LOCAL-00003" summary="feat: 구글 소셜 로그인 기능 추가">
+      <option name="closed" value="true" />
+      <created>1698391076776</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1698391076776</updated>
+    </task>
+    <task id="LOCAL-00004" summary="feat: 페이스북 소셜 로그인 기능 추가">
+      <option name="closed" value="true" />
+      <created>1698472313806</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1698472313806</updated>
+    </task>
+    <task id="LOCAL-00005" summary="feat: 네이버 소셜 로그인 기능 추가">
+      <option name="closed" value="true" />
+      <created>1698480731750</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1698480731750</updated>
+    </task>
+    <task id="LOCAL-00006" summary="feat: 네이버 소셜 로그인 기능 추가">
+      <option name="closed" value="true" />
+      <created>1698480748958</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1698480748958</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feat: 로그인, 회원가입 기능 추가" />
+    <MESSAGE value="chore: 권한 설정 테스트 추가" />
+    <MESSAGE value="feat: 구글 소셜 로그인 기능 추가" />
+    <MESSAGE value="feat: 페이스북 소셜 로그인 기능 추가" />
+    <MESSAGE value="feat: 네이버 소셜 로그인 기능 추가" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: 네이버 소셜 로그인 기능 추가" />
+  </component>
+</project>
