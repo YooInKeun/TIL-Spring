@@ -40,7 +40,7 @@ public class PrincipalOauth2UserService extends DefaultOAuth2UserService {
             System.out.println("네이버 로그인 요청");
             oAuth2UserInfo = new NaverUserInfo((Map<String, Object>) oAuth2User.getAttributes().get("response"));
         } else {
-            System.out.println("구글, 페이스북 로그인만 지원합니다.");
+            System.out.println("구글, 페이스북, 네이버 로그인만 지원합니다.");
         }
 
         String provider = oAuth2UserInfo.getProvider();
