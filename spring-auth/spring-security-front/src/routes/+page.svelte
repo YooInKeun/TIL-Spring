@@ -8,7 +8,7 @@
             if (popup.closed) {
                 clearInterval(timer);
                 if (isLogin) {
-                    window.location.href = '/index';
+                    // window.location.href = '/index';
                 }
             }
         }, 1000);
