@@ -1,0 +1,17 @@
+spring:
+  batch:
+    job:
+      names: ${job.name:NONE}
+    jdbc:
+      initialize-schema: ALWAYS
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:test
+    username: sa
+    password:
+  jpa:
+    show-sql: true
