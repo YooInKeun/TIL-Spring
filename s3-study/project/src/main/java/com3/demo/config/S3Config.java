@@ -28,13 +28,6 @@ public class S3Config {
     @Primary
     @Bean
     public AmazonS3 amazonS3Client() {
-
-        // accessKey, secretKey는 인스턴스 내부에서 관리하는 게 좋음
-        final AWSCredentials credentials = new BasicAWSCredentials(
-                "accessKey",
-                "secretKey"
-        );
-
         return AmazonS3ClientBuilder
                 .standard()
                 .withCredentials(new AWSStaticCredentialsProvider(credentials))
